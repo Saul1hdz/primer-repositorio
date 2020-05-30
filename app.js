@@ -41,7 +41,7 @@ function obtenerLocalStorage() {
    
     return lista_todo;}
 
-    obtenerLocalStorage();
+    
 
 //agregar al local storage
     function agregarLocalStorage(texto_input){
@@ -77,9 +77,11 @@ function obtenerLocalStorage() {
     function borrarTextoLocalStorage(item) {
 
         let textoLS, textoBorrar;
+        console.log(`Antes de borrar: ${item}`)
         // Elimina la X del texto
-        textoBorrar = item.substring(0, item.length - 1);
-   
+        textoBorrar = item.substring(0, item.length - 2);
+        console.log(`Despues de borrar: ${textoBorrar}`)
+
         textoLS = obtenerLocalStorage();
 
         textoLS.forEach(function(texto, index) {
@@ -112,5 +114,5 @@ function obtenerLocalStorage() {
         // añade el tweet a la lista
         listaTexto.appendChild(li);
    
-        // Añadir a Local Storage
-        agregarTextoLocalStorage(Text);}
+    }
+    
