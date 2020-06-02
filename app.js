@@ -28,6 +28,8 @@ cargarEventListener();
 function random(){
     let texto_input = obtener();
     agregarLocalStorage(texto_input);
+
+    
 }
 //comprobar que exista algo en el storage, retorna un arreglo
 function obtenerLocalStorage() {
@@ -112,6 +114,7 @@ function obtenerLocalStorage() {
         li.appendChild(botonBorrar);
         // añade el tweet a la lista
         listaTexto.appendChild(li);
-   
+        
+        formulario.reset();
     };
     
